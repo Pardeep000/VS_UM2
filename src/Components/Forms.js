@@ -1,9 +1,4 @@
 import React, { useState } from "react";
-// import {FaPhone} from 'react-icons/fa';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
-// import bgvideo from "../Media/bg.mp4";
-// import logo from "../Media/logo.PNG";
 import "./Forms.css";
 import Video from "./Video";
 import Topbar from "./Topbar";
@@ -41,14 +36,13 @@ export default function Forms() {
 
         
         <Routes>
-        <Route exact path="/" element={<SignUpForm toaster={toaster} getRegisteredUsers={getRegisteredUsers} />} />
-        <Route exact path="/path" element={<LoginForm registeredUsers={registeredUsers} />} />
+        <Route exact path="/" element={<LoginForm registeredUsers={registeredUsers} />} />
+        <Route exact path="/signup" element={<SignUpForm toaster={toaster} getRegisteredUsers={getRegisteredUsers} />} />
+        {/* <Route exact path="/" element={<SignUpForm toaster={toaster} getRegisteredUsers={getRegisteredUsers} />} /> */}
+
         <Route path="*" element={<NoPage />} />
         </Routes>
-        {/* <LoginForm registeredUsers={registeredUsers} />
-        <SignUpForm toaster={toaster} getRegisteredUsers={getRegisteredUsers} />
-        <ToastConponent toast={toast} setToast={setToast} toastmsg={toastmsg} /> */}
-        
+        {/* <ToastConponent toast={toast} setToast={setToast} toastmsg={toastmsg} /> */}
         {/* <button onClick={() => toaster("just checking it")}>toaster</button> */}
       </div>
     </div>
@@ -57,5 +51,5 @@ export default function Forms() {
 }
 
 function NoPage(){
-  return <h2>404 ,Error found</h2>
+  return <h2 style={{color:'white',textAlign:'center'}} className='mt-5'>404 ,Not found</h2>
 }

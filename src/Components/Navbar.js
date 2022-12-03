@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "../Media/logo.PNG";
+import {Link } from "react-router-dom";
+
 
 export default function Navbar(props) {
   return (
@@ -47,14 +49,13 @@ export default function Navbar(props) {
                 fontWeight: "bold"
               }}
             >
-              <a
+              <Link to='/'
                 className="nav-link active"
                 aria-current="page"
-                href="/"
                 style={{ color: "white" }}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li
               className="nav-item dropdown"
@@ -153,7 +154,7 @@ export default function Navbar(props) {
               </ul>
             </li>
             {/*  */}
-            <button
+            <Link to='/signup'><button
               className="btn btn-outline-light"
               style={{
                 position: "absolute",
@@ -163,7 +164,7 @@ export default function Navbar(props) {
               }}
             >
               Register
-            </button>
+            </button></Link>
           </ul>
         </div>
       </div>

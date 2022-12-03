@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
-// import Toast from "./Toast";
 import {Link } from "react-router-dom";
+//
+// import {faEnvelope,faKey,faEye} from 'react-icons/fa';
+//
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope,faKey,faEye} from '@fortawesome/fontawesome-free-solid'
+//
+
 
 export default function SignUpForm(props) {
   // Password validation function
@@ -104,11 +110,12 @@ export default function SignUpForm(props) {
         style={{ backgroundColor: "grey", fontSize: "22px" }}
       >
         <div style={{ color: "red", fontWeight: "bold" }}>Sign Up</div>
-        <div id="iconbar">
+        {/* <div id="iconbar">
+        <FontAwesomeIcon icon={faCoffee} />
           <i className="fa-brands fa-square-facebook"></i>
           <i className="fa-brands fa-square-twitter"></i>
           <i className="fa-brands fa-square-google-plus"></i>
-        </div>
+        </div> */}
       </div>
       <form onSubmit={register}>
         <div className="card-body">
@@ -162,7 +169,8 @@ export default function SignUpForm(props) {
                 id="basic-addon1"
                 style={{ color: "white", backgroundColor: "blue" }}
               >
-                <i className="fa-regular fa-envelope"></i>
+                <FontAwesomeIcon icon={faEnvelope} />
+                <i class="fa fa-phone" aria-hidden="true"></i>
               </span>
               <input
                 type="email"
@@ -186,7 +194,8 @@ export default function SignUpForm(props) {
                 id="basic-addon1"
                 style={{ color: "white", backgroundColor: "blue" }}
               >
-                <i className="fa-solid fa-key"></i>
+                {/* <i className="fa-solid fa-key"></i> */}
+                <FontAwesomeIcon icon={faKey} />
               </span>
               <input
                 type="text"
@@ -202,7 +211,8 @@ export default function SignUpForm(props) {
                 type="button"
                 id="button-addon2"
               >
-                <i className="fa-solid fa-eye-slash"></i>
+                {/* <i className="fa-solid fa-eye-slash"></i> */}
+                <FontAwesomeIcon icon={faEye} />
               </button>
             </div>
             <label
@@ -217,7 +227,8 @@ export default function SignUpForm(props) {
                 id="basic-addon1"
                 style={{ color: "white", backgroundColor: "blue" }}
               >
-                <i className="fa-solid fa-key"></i>
+                {/* <i className="fa-solid fa-key"></i> */}
+                <FontAwesomeIcon icon={faKey} />
               </span>
               <input
                 type="text"
@@ -233,7 +244,8 @@ export default function SignUpForm(props) {
                 type="button"
                 id="button-addon2"
               >
-                <i className="fa-solid fa-eye-slash"></i>
+                {/* <i className="fa-solid fa-eye-slash"></i> */}
+                <FontAwesomeIcon icon={faEye} />
               </button>
             </div>
           </div>
@@ -244,7 +256,7 @@ export default function SignUpForm(props) {
           {/* <!-- Already register line --> */}
           <div className="d-flex justify-content-center mt-4">
             <div className="text-light me-2">Already a User?</div>
-            <Link to='/path'><div style={{ color: "blue", fontWeight: "bold" }}> Sign-In</div></Link>
+            <Link to='/'><div style={{ color: "blue", fontWeight: "bold" }}> Sign-In</div></Link>
           </div>
         </div>
       </form>

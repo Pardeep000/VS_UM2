@@ -1,5 +1,9 @@
 import React from "react";
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+//
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone, faEnvelope, faKey, faEye } from '@fortawesome/fontawesome-free-solid'
+//
 
 export default function LoginForm(props) {
   let arr = [
@@ -50,11 +54,11 @@ export default function LoginForm(props) {
         style={{ backgroundColor: "grey", fontSize: "22px" }}
       >
         <div style={{ color: "red", fontWeight: "bold" }}>Sign In</div>
-        <div id="iconbar">
+        {/* <div id="iconbar">
           <i className="fa-brands fa-square-facebook"></i>
           <i className="fa-brands fa-square-twitter"></i>
           <i className="fa-brands fa-square-google-plus"></i>
-        </div>
+        </div> */}
       </div>
       <form onSubmit={collectLogindata}>
         <div className="card-body">
@@ -71,7 +75,7 @@ export default function LoginForm(props) {
                 id="basic-addon1"
                 style={{ color: "white", backgroundColor: "blue" }}
               >
-                <i className="fa-regular fa-envelope"></i>
+                <FontAwesomeIcon icon={faEnvelope} />
               </span>
               <input
                 type="email"
@@ -80,7 +84,7 @@ export default function LoginForm(props) {
                 placeholder="name@example.com"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
-                // required
+              // required
               />
             </div>
             <label
@@ -95,7 +99,7 @@ export default function LoginForm(props) {
                 id="basic-addon1"
                 style={{ color: "white", backgroundColor: "blue" }}
               >
-                <i className="fa-solid fa-key"></i>
+                <FontAwesomeIcon icon={faKey} />
               </span>
               <input
                 type="text"
@@ -104,14 +108,14 @@ export default function LoginForm(props) {
                 placeholder="********"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
-                // required
+              // required
               />
               <button
                 className="btn btn-secondary"
                 type="button"
                 id="button-addon2"
               >
-                <i className="fa-solid fa-eye-slash"></i>
+                <FontAwesomeIcon icon={faEye} />
               </button>
             </div>
           </div>
@@ -139,7 +143,7 @@ export default function LoginForm(props) {
           {/* forgot password */}
           <div className="d-flex justify-content-center mt-5">
             <div className="text-light me-2">Don't you have an Account?</div>
-            <Link to='/'><div style={{ color: "blue", fontWeight: "bold" }}> Sign-Up</div></Link>
+            <Link to='/signup'><div style={{ color: "blue", fontWeight: "bold" }}> Sign-Up</div></Link>
           </div>
         </div>
       </form>
