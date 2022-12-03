@@ -42,7 +42,7 @@ export default function Forms() {
         <Route exact path="/" element={<LoginForm toaster={toaster} registeredUsers={registeredUsers} setlogindata={setlogindata}/>} />
         <Route exact path="/signup" element={<SignUpForm toaster={toaster} getRegisteredUsers={getRegisteredUsers} />} />
         {/* <Route exact path="/" element={<SignUpForm toaster={toaster} getRegisteredUsers={getRegisteredUsers} />} /> */}
-        <Route exact path='/welcome' element={<UserManagement />}/>
+        <Route exact path='/welcome' element={<UserManagement logindata={logindata} />}/>
 
 
         <Route path="*" element={<NoPage />} />

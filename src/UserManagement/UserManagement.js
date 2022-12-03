@@ -10,9 +10,11 @@ function UserManagement(props) {
   let changeMode = () => {
     setMode(mode === "dark" ? "light" : "dark");
   };
+  console.log('data from welcome => ',props.logindata);
   return (
     <>
-    <h2>{props.logindata==null?'no login data':props.logindata}</h2>
+    <h2>{props.logindata==null?'nothing':props.logindata.uemail}</h2>
+    <h2>{props.logindata==null?'nothing':props.logindata.upass}</h2>
       <div className="container">
         <TopBar mode={mode} changeMode={changeMode} />
       </div>

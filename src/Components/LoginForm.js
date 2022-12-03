@@ -41,7 +41,7 @@ export default function LoginForm(props) {
       } else {
         console.log("password matched...");
         props.setlogindata(loginInputdata)
-        navigate("welcome/")
+        navigate("/welcome")
       }
     }
     //
