@@ -26,6 +26,7 @@ export default function LoginForm(props) {
     });
     if (userExist == undefined) {
       console.log("user does not exist");
+      props.toaster("User does not exist with this email address.")
     } else {
       console.log("email matched...");
       let passMatch = props.registeredUsers.find((e) => {
@@ -33,6 +34,7 @@ export default function LoginForm(props) {
       });
       if (passMatch === undefined) {
         console.log("password does not matched");
+        props.toaster("Password does not match.")
       } else {
         console.log("password matched...");
       }

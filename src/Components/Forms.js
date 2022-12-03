@@ -6,6 +6,8 @@ import Navbar from "./Navbar";
 import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";
 //
+import UserManagement from '../UserManagement/UserManagement';
+//
 import ToastConponent from "./ToastConponent";
 //importing router
 import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
@@ -36,13 +38,15 @@ export default function Forms() {
 
         
         <Routes>
-        <Route exact path="/" element={<LoginForm registeredUsers={registeredUsers} />} />
+        <Route exact path="/" element={<LoginForm toaster={toaster} registeredUsers={registeredUsers} />} />
         <Route exact path="/signup" element={<SignUpForm toaster={toaster} getRegisteredUsers={getRegisteredUsers} />} />
         {/* <Route exact path="/" element={<SignUpForm toaster={toaster} getRegisteredUsers={getRegisteredUsers} />} /> */}
+        <Route exact path='/welcome' element={<UserManagement/>}/>
+
 
         <Route path="*" element={<NoPage />} />
         </Routes>
-        {/* <ToastConponent toast={toast} setToast={setToast} toastmsg={toastmsg} /> */}
+        <ToastConponent toast={toast} setToast={setToast} toastmsg={toastmsg} />
         {/* <button onClick={() => toaster("just checking it")}>toaster</button> */}
       </div>
     </div>
