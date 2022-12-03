@@ -13,6 +13,7 @@ import ToastConponent from "./ToastConponent";
 import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
 
 export default function Forms() {
+  const [logindata, setlogindata] = useState(null);
   //
   const [registeredUsers, setRegisteredUsers] = useState(null);
   let getRegisteredUsers = (data) => {
@@ -38,10 +39,10 @@ export default function Forms() {
 
         
         <Routes>
-        <Route exact path="/" element={<LoginForm toaster={toaster} registeredUsers={registeredUsers} />} />
+        <Route exact path="/" element={<LoginForm toaster={toaster} registeredUsers={registeredUsers} setlogindata={setlogindata}/>} />
         <Route exact path="/signup" element={<SignUpForm toaster={toaster} getRegisteredUsers={getRegisteredUsers} />} />
         {/* <Route exact path="/" element={<SignUpForm toaster={toaster} getRegisteredUsers={getRegisteredUsers} />} /> */}
-        <Route exact path='/welcome' element={<UserManagement/>}/>
+        <Route exact path='/welcome' element={<UserManagement />}/>
 
 
         <Route path="*" element={<NoPage />} />

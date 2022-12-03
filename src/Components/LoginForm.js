@@ -1,11 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 //
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope, faKey, faEye } from '@fortawesome/fontawesome-free-solid'
 //
 
 export default function LoginForm(props) {
+  //use for navigation
+  const navigate = useNavigate();
+  //
   let arr = [
     "einstein1@gmail.com",
     "einstein12@gmail.com",
@@ -37,6 +40,8 @@ export default function LoginForm(props) {
         props.toaster("Password does not match.")
       } else {
         console.log("password matched...");
+        props.setlogindata(loginInputdata)
+        navigate("welcome/")
       }
     }
     //

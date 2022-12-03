@@ -5,7 +5,7 @@ function AccordionReact(props) {
   return (
     <Accordion defaultActiveKey="0">
       <Accordion.Item eventKey="1">
-        <Accordion.Header>User-Detail - {props.name}</Accordion.Header>
+        <Accordion.Header>About - {props.name}</Accordion.Header>
         <Accordion.Body style={accStyle}>{props.text}</Accordion.Body>
       </Accordion.Item>
     </Accordion>
