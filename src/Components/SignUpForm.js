@@ -106,16 +106,10 @@ export default function SignUpForm(props) {
       }}
     >
       <div
-        className="card-header d-flex"
-        style={{ backgroundColor: "grey", fontSize: "22px" }}
+        className="card-header d-flex justify-content-center"
+        style={{ backgroundColor: "#2080ba", fontSize: "22px" }}
       >
-        <div style={{ color: "red", fontWeight: "bold" }}>Sign Up</div>
-        {/* <div id="iconbar">
-        <FontAwesomeIcon icon={faCoffee} />
-          <i className="fa-brands fa-square-facebook"></i>
-          <i className="fa-brands fa-square-twitter"></i>
-          <i className="fa-brands fa-square-google-plus"></i>
-        </div> */}
+        <div style={{ color: "white", fontWeight: "bold" }}>Sign Up</div>        
       </div>
       <form onSubmit={register}>
         <div className="card-body">
@@ -167,7 +161,7 @@ export default function SignUpForm(props) {
               <span
                 className="input-group-text"
                 id="basic-addon1"
-                style={{ color: "white", backgroundColor: "blue" }}
+                style={{ color: "white", backgroundColor: "grey" }}
               >
                 <FontAwesomeIcon icon={faEnvelope} />
                 <i class="fa fa-phone" aria-hidden="true"></i>
@@ -192,7 +186,7 @@ export default function SignUpForm(props) {
               <span
                 className="input-group-text"
                 id="basic-addon1"
-                style={{ color: "white", backgroundColor: "blue" }}
+                style={{ color: "white", backgroundColor: "grey" }}
               >
                 {/* <i className="fa-solid fa-key"></i> */}
                 <FontAwesomeIcon icon={faKey} />
@@ -225,7 +219,7 @@ export default function SignUpForm(props) {
               <span
                 className="input-group-text"
                 id="basic-addon1"
-                style={{ color: "white", backgroundColor: "blue" }}
+                style={{ color: "white", backgroundColor: "grey" }}
               >
                 {/* <i className="fa-solid fa-key"></i> */}
                 <FontAwesomeIcon icon={faKey} />
@@ -250,13 +244,13 @@ export default function SignUpForm(props) {
             </div>
           </div>
           {/* <!-- Register button --> */}
-          <button id="submit_btn" className="mt-3" type="submit">
+          <button id="submit_btn" className="mt-3 py-2" type="submit" style={{backgroundColor:'#2080ba'}}>
             Get Registered
           </button>
           {/* <!-- Already register line --> */}
           <div className="d-flex justify-content-center mt-4">
             <div className="text-light me-2">Already a User?</div>
-            <Link to='/'><div style={{ color: "blue", fontWeight: "bold" }}> Sign-In</div></Link>
+            <Link to='/'><div style={{ color: "#2080ba", fontWeight: "bold" }}> Sign-In</div></Link>
           </div>
         </div>
       </form>

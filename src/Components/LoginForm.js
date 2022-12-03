@@ -50,15 +50,10 @@ export default function LoginForm(props) {
       }}
     >
       <div
-        className="card-header d-flex"
-        style={{ backgroundColor: "grey", fontSize: "22px" }}
+        className="card-header d-flex justify-content-center"
+        style={{ backgroundColor: "#2080ba", fontSize: "22px" }}
       >
-        <div style={{ color: "red", fontWeight: "bold" }}>Sign In</div>
-        {/* <div id="iconbar">
-          <i className="fa-brands fa-square-facebook"></i>
-          <i className="fa-brands fa-square-twitter"></i>
-          <i className="fa-brands fa-square-google-plus"></i>
-        </div> */}
+        <div style={{ color: "white", fontWeight: "bold" }}>Sign In</div>
       </div>
       <form onSubmit={collectLogindata}>
         <div className="card-body">
@@ -73,7 +68,7 @@ export default function LoginForm(props) {
               <span
                 className="input-group-text"
                 id="basic-addon1"
-                style={{ color: "white", backgroundColor: "blue" }}
+                style={{ color: "white", backgroundColor: "grey" }}
               >
                 <FontAwesomeIcon icon={faEnvelope} />
               </span>
@@ -97,7 +92,7 @@ export default function LoginForm(props) {
               <span
                 className="input-group-text"
                 id="basic-addon1"
-                style={{ color: "white", backgroundColor: "blue" }}
+                style={{ color: "white", backgroundColor: "grey" }}
               >
                 <FontAwesomeIcon icon={faKey} />
               </span>
@@ -137,13 +132,13 @@ export default function LoginForm(props) {
             <div className="text-light">Forgot Password?</div>
           </div>
           {/* button */}
-          <button id="submit_btn" type="submit">
+          <button id="submit_btn" type="submit" style={{backgroundColor:'#2080ba'}} className='py-2'>
             Get Started
           </button>
           {/* forgot password */}
           <div className="d-flex justify-content-center mt-5">
             <div className="text-light me-2">Don't you have an Account?</div>
-            <Link to='/signup'><div style={{ color: "blue", fontWeight: "bold" }}> Sign-Up</div></Link>
+            <Link to='/signup'><div style={{ color: "#2080ba", fontWeight: "bold" }}> Sign-Up</div></Link>
           </div>
         </div>
       </form>
