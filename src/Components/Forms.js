@@ -13,7 +13,11 @@ import ToastConponent from "./ToastConponent";
 import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
 
 export default function Forms() {
+  //
+  const [welcomeflag, setWelcomeflag] = useState(false);
+  //
   const [logindata, setlogindata] = useState(null);
+  console.log("logindata = ",logindata)
   //
   const [registeredUsers, setRegisteredUsers] = useState(null);
   let getRegisteredUsers = (data) => {
@@ -35,14 +39,14 @@ export default function Forms() {
       <Video />
       <div className="overlaidContent">
         <Topbar />
-        <Navbar registeredUsers={registeredUsers} />
+        <Navbar registeredUsers={registeredUsers} welcomeflag={welcomeflag} setWelcomeflag={setWelcomeflag} setlogindata={setlogindata}/>
 
         
         <Routes>
-        <Route exact path="/" element={<LoginForm toaster={toaster} registeredUsers={registeredUsers} setlogindata={setlogindata}/>} />
+        <Route exact path="/" element={<LoginForm toaster={toaster} registeredUsers={registeredUsers} setlogindata={setlogindata} setWelcomeflag={setWelcomeflag}/>} />
         <Route exact path="/signup" element={<SignUpForm toaster={toaster} getRegisteredUsers={getRegisteredUsers} />} />
         {/* <Route exact path="/" element={<SignUpForm toaster={toaster} getRegisteredUsers={getRegisteredUsers} />} /> */}
-        <Route exact path='/welcome' element={<UserManagement logindata={logindata} />}/>
+        <Route exact path='/welcome' element={<UserManagement logindata={logindata} welcomeflag={welcomeflag}/>}/>
 
 
         <Route path="*" element={<NoPage />} />

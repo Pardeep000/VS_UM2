@@ -154,7 +154,20 @@ export default function Navbar(props) {
               </ul>
             </li>
             {/*  */}
-            <Link to='/signup'><button
+            {props.welcomeflag===false?<Link to='/signup'><button
+              className="btn btn-outline-light"
+              style={{
+                position: "absolute",
+                right: "5%",
+                top: "15%",
+                fontWeight: "bold"}}>Register</button></Link>:<Link to='/'><button onClick={()=>{props.setWelcomeflag(false);props.setlogindata(null)}}
+                className="btn btn-outline-light"
+                style={{
+                  position: "absolute",
+                  right: "5%",
+                  top: "15%",
+                  fontWeight: "bold"}}>Logout</button></Link>}
+            {/* <Link to='/signup'><button
               className="btn btn-outline-light"
               style={{
                 position: "absolute",
@@ -164,7 +177,7 @@ export default function Navbar(props) {
               }}
             >
               Register
-            </button></Link>
+            </button></Link> */}
           </ul>
         </div>
       </div>

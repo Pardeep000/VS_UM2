@@ -40,8 +40,12 @@ export default function LoginForm(props) {
         props.toaster("Password does not match.")
       } else {
         console.log("password matched...");
-        props.setlogindata(loginInputdata)
+        // props.setlogindata(loginInputdata)
+        props.setlogindata(userExist)
         navigate("/welcome")
+        //
+        props.setWelcomeflag(true)
+        //
       }
     }
     //
