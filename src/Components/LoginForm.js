@@ -23,6 +23,11 @@ export default function LoginForm(props) {
       loginInputdata[key] = value;
       // console.log(key, value);
     }
+    //
+    if(props.registeredUsers==null){
+      props.toaster("No user exist...")
+    }
+    //
     console.log(loginInputdata);
     let userExist = props.registeredUsers.find((e) => {
       return e.uemail === loginInputdata.uemail;
